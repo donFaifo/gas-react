@@ -1,7 +1,10 @@
 import Title from "./Main/Title";
 import Button from "./Common/Button";
 import { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
+import Main from './Main';
+import About from './About';
+
 
 function LinkWrapped({ to, children }) {
     return (
@@ -28,7 +31,11 @@ export default function App() {
                 <LinkWrapped to={`about`}>Acerca de...</LinkWrapped>
             </div>
             <div>
-                <Outlet />
+            <Routes>
+                <Route path='/' element={<Main />} />
+                <Route path='about' element={<About />} />
+                <Route path='*' element={<Main />} />
+            </Routes>
             </div>
         </div>
     );

@@ -6,7 +6,7 @@
     "start": "parcel src/index.html",
     "glogin": "clasp login",
     "glogout": "clasp logout",
-    "gcreate": "clasp create --title \"React app\" --rootDir ./dist --type webapp",
+    "gcreate": "clasp create --title \"React app with router\" --rootDir ./dist --type webapp",
     "gstart": "clasp push --watch",
     "gpush": "clasp push",
     "gpull": "clasp pull",
