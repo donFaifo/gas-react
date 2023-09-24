@@ -3,15 +3,18 @@ Scaffolding básico para proyectos Google App Script usando React con Tailwindcs
 
 # Instrucciones
 * Clonar repositorio
-* `npm install`
+* `npm install` - Instala las dependencias del proyecto
 * `npm run start` - Compila el proyecto en la carpeta `dist` en modo _desarrollo_
-* `npm run glogin`
-* `npm run gcreate`
+* `npm run glogin` - Ingresa en la cuenta Google donde se quiera desplegar la app
+* `npm run gcreate` - Crea el proyecto con el título que aparece en el script del package.json
+```js
+"gcreate": "clasp create --title \"React app\" --rootDir ./dist --type webapp"
+```
 * Asegurar que `.clasp.json` esté en el directorio raíz y no en la carpeta `dist`.
 * Ir a [Google App Script](https://script.google.com/home) para configurar el proyecto
 * Modificar zona horaria (si fuera necesario) y marcar _Mostrar manifiesto_
 * Modificar `appscript.json` para añadir
-```
+```js
 "webapp": {
     "access": "MYSELF",
     "executeAs": "USER_ACCESSING"
@@ -19,7 +22,7 @@ Scaffolding básico para proyectos Google App Script usando React con Tailwindcs
 ```
 * `npm run gpull` - Para obtener la última versión del manifiesto.
 * `npm run gdeploy` - esto da una id para hacer reimplementaciones aumentando el número de versión automáticamente, modificar script en `package.json`:
-```
+```js
 "gdeploy": "clasp deploy -i número_de_id_obtenido_en_deploy -d \"Descripción para añadir al deploy\" "
 ```
 * Abrir proyecto App Script con `clasp open` (si no estuviera abierto ya)
