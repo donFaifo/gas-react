@@ -10,7 +10,7 @@
     "gstart": "clasp push --watch",
     "gpush": "clasp push",
     "gpull": "clasp pull",
-    "gdeploy": "clasp deploy",
+    "gdeploy": "clasp deploy -d \"React app\"",
     "build": "parcel build src/index.html"
   },
   "keywords": [],
